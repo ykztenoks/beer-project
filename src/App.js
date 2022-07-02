@@ -4,7 +4,6 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,7 +21,7 @@ function App() {
       </header>
 
       <h1>hey there</h1>
-
+      <h1>JINO JINO JINO </h1>
     </div>
   );
 }
