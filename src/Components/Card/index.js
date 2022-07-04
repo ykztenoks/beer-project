@@ -6,14 +6,14 @@ export function Card({ beer }) {
         <div className="card-body">
           <h5 className="card-title">{beer.name}</h5>
           <p className="card-text">
-            <p>IBU: {beer.ibu}</p>
-            <p>{beer.style}</p>
+            <div>IBU: {beer.ibu}</div>
+            <div>{beer.style}</div>
           </p>
-          <p className="card-text">
-            <small class="text-muted">
-              <p>{beer.country}</p>
+          <div className="card-text">
+            <small className="text-muted">
+              <span>{beer.country}</span>
             </small>
-          </p>
+          </div>
         </div>
       </div>
     </div>
