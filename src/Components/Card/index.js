@@ -6,7 +6,7 @@ export function Card({ beer }) {
         <div className="card-body">
           <h5 className="card-title">{beer.name}</h5>
           <p className="card-text">
-            <p>{beer.ibu}</p>
+            <p>IBU: {beer.ibu}</p>
             <p>{beer.style}</p>
           </p>
           <p className="card-text">
