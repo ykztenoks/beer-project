@@ -4,6 +4,7 @@ import { Card } from "../../Components/Card";
 import { ButtonBack } from "../../Components/ButtonBack";
 import { Link } from "react-router-dom";
 
+
 export function BeerList() {
   const [beer, setBeer] = useState([]);
 
@@ -15,6 +16,7 @@ export function BeerList() {
         );
         setBeer(response.data);
         console.log(response);
+
       } catch (error) {
         console.log(error);
       }
