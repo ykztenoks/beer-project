@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Card } from "../../Components/Card";
 import { ButtonBack } from "../../Components/ButtonBack";
+import { Link } from "react-router-dom";
+
 
 export function BeerList() {
   const [beer, setBeer] = useState([]);
@@ -14,7 +16,7 @@ export function BeerList() {
         );
         setBeer(response.data);
         console.log(response);
-        console.log(response.data);
+
       } catch (error) {
         console.log(error);
       }
@@ -29,7 +31,9 @@ export function BeerList() {
       {beer.map((currentBeer) => {
         return (
           <div>
-            <Card beer={currentBeer} />
+            <Link to={`/beer-detail/${currentBeer._id}`}>
+              <Card beer={currentBeer} />
+            </Link>
           </div>
         );
       })}
