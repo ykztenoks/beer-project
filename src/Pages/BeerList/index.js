@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Card } from "../../Components/Card";
 import { ButtonBack } from "../../Components/ButtonBack";
-import { Button } from "bootstrap";
+import { Link } from "react-router-dom";
+
 export function BeerList() {
   const [beer, setBeer] = useState([]);
 
@@ -12,9 +13,8 @@ export function BeerList() {
         const response = await axios.get(
           "https://ironrest.herokuapp.com/mocked-beers"
         );
-        setBeer(response.data[0].beer);
+        setBeer(response.data);
         console.log(response);
-        console.log(response.data[0].beer);
       } catch (error) {
         console.log(error);
       }
@@ -29,7 +29,9 @@ export function BeerList() {
       {beer.map((currentBeer) => {
         return (
           <div>
-            <Card beer={currentBeer} />
+            <Link to={`/beer-detail/${currentBeer._id}`}>
+              <Card beer={currentBeer} />
+            </Link>
           </div>
         );
       })}
