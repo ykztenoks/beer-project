@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
-import { ReviewCard } from "../../Components/ReviewCard";
 import { ReviewForm } from "../../Components/ReviewForm";
 
 export function BeerDetail() {
@@ -37,8 +36,6 @@ export function BeerDetail() {
       <h4>Sugestão de harmonização: {beerDetail.pair}</h4>
 
       <ReviewForm />
-
-   
     </div>
   );
 }
