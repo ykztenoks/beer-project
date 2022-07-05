@@ -6,6 +6,7 @@ import { CreateBeer } from "./Pages/CreateBeer";
 import { AboutUs } from "./Pages/AboutUs";
 import { Error } from "./Pages/Error";
 import { EditReviewForm } from "./Pages/EditReview";
+import { EditBeer } from "./Pages/EditBeer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/create-beer" element={<CreateBeer />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/error" element={<Error />} />
+        <Route path="/edit-beer/:id" element={<EditBeer />} />
       </Routes>
     </div>
   );
