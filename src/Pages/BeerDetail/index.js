@@ -38,11 +38,7 @@ export function BeerDetail() {
 
       <ReviewForm />
 
-      <ReviewCard
-        username={beerDetail.username}
-        score={beerDetail.score}
-        comments={beerDetail.comments}
-      />
+   
     </div>
   );
 }
