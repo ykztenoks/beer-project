@@ -1,16 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ReviewCard } from "../ReviewCard";
 
 export function ReviewForm() {
+  const navigate = useNavigate();
+  const [previousReviews, setPreviousReviews] = useState([]);
+  // ESSE OLHA O TODO E SALVA O ESTADO DO TODO , ELE TEM QUE PEGAR O GET PRA OLHAR E GUARDAR
   const { id } = useParams();
   const [form, setForm] = useState({
+    // ESSE OLHA O QUE O CARA TA ESCREVENDO E SERVE PRA ADICIONAR NA ARRAY PQ EH OBJ
     username: "",
     score: "",
     comments: "",
   });
 
-  console.log(form);
+  console.log(previousReviews);
 
   useEffect(() => {
     async function fetchReview() {
@@ -19,7 +24,7 @@ export function ReviewForm() {
           `https://ironrest.herokuapp.com/mocked-beers/${id}`
         );
         console.log(response);
-        setForm({ ...response.data.reviews });
+        setPreviousReviews([...response.data.reviews]);
       } catch (error) {
         console.log(error);
       }
@@ -29,17 +34,19 @@ export function ReviewForm() {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    //ESSE EH PRA GUARDAR ALTERACOOOOESSS
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const clone = { ...form };
-      delete clone._id;
+      const clone = { reviews: [...previousReviews, form] };
+      //na hora de colocar o clone , eh ali que a api vai olhar o reviews e saber pra onde vai
       await axios.put(
         `https://ironrest.herokuapp.com/mocked-beers/${id}`,
         clone
       );
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -85,6 +92,22 @@ export function ReviewForm() {
           Envie seu review!
         </button>
       </form>
+
+      {previousReviews.map((currentReview) => {
+        return (
+          <>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5 className="card-title">{currentReview.username}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  {currentReview.score}
+                </h6>
+                <p className="card-text">{currentReview.comments}</p>
+              </div>
+            </div>
+          </>
+        );
+      })}
     </>
   );
 }
