@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
-import { ReviewCard } from "../../Components/ReviewCard";
+import { Link } from "react-router-dom";
 import { ReviewForm } from "../../Components/ReviewForm";
 
 export function BeerDetail() {
@@ -35,10 +35,10 @@ export function BeerDetail() {
       <h4>Pais de origem: {beerDetail.country}</h4>
       <h4>Descrição: {beerDetail.description}</h4>
       <h4>Sugestão de harmonização: {beerDetail.pair}</h4>
-
+      <Link to={`/edit-beer/${id}`}>
+        <button>Editar informações</button>
+      </Link>
       <ReviewForm />
-
-   
     </div>
   );
 }

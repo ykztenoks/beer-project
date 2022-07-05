@@ -5,7 +5,7 @@ import { BeerList } from "./Pages/BeerList";
 import { CreateBeer } from "./Pages/CreateBeer";
 import { AboutUs } from "./Pages/AboutUs";
 import { Error } from "./Pages/Error";
-
+import { EditBeer } from "./Pages/EditBeer";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
         <Route path="/create-beer" element={<CreateBeer />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/error" element={<Error />} />
+        <Route path="/edit-beer/:id" element={<EditBeer />} />
       </Routes>
     </div>
   );
