@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
-import { Link } from "react-router-dom";
 import { ReviewForm } from "../../Components/ReviewForm";
 
 export function BeerDetail() {

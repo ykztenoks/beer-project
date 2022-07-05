@@ -1,20 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-
-export function ReviewForm() {
+export function EditReviewForm() {
   const [previousReviews, setPreviousReviews] = useState([]);
   // ESSE OLHA O TODO E SALVA O ESTADO DO TODO , ELE TEM QUE PEGAR O GET PRA OLHAR E GUARDAR
-
-  const [beer, setBeer] = useState();
   const { id } = useParams();
+  const [index, setIndex] = useState([]);
   const [form, setForm] = useState({
     // ESSE OLHA O QUE O CARA TA ESCREVENDO E SERVE PRA ADICIONAR NA ARRAY PQ EH OBJ
     username: "",
     score: "",
     comments: "",
+    indexNum: [index],
   });
+  console.log(index);
+  console.log(previousReviews[0]);
+  console.log(previousReviews);
 
   useEffect(() => {
     async function fetchReview() {
@@ -24,7 +26,6 @@ export function ReviewForm() {
         );
         console.log(response);
         setPreviousReviews([...response.data.reviews]);
-        setBeer(response);
       } catch (error) {
         console.log(error);
       }
@@ -32,11 +33,39 @@ export function ReviewForm() {
     fetchReview();
   }, [id]);
 
+  const haveIndex = previousReviews.map((c) => {});
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     //ESSE EH PRA GUARDAR ALTERACOOOOESSS
   };
 
+  const indexOnClick = () => {
+    setIndex(previousReviews.indexOf(previousReviews[index]));
+    console.log(index);
+  };
+
+  const handleDelete = (review) => {
+    const clone = { ...previousReviews };
+    const newReview = clone.filter((currentReview) => {
+      return review !== currentReview;
+    });
+    setPreviousReviews({ ...previousReviews, [review]: newReview });
+  };
+
+  //   const deleteEditTest = (review)=>{
+  //     for (let i=0, i<previousReviews.length , i++ ){
+  //         if (i === previousReviews[i-1]){
+  //             const clone = { ...previousReviews };
+  //     const newReview = clone.filter((currentReview) => {
+  //       return review !== currentReview;
+  //         }
+  //         setPreviousReviews({ ...previousReviews, [review]: newReview })
+  //     }
+  //   }
+  //   }
+
+  //   const handleIndex = (e) => {};
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -95,7 +124,7 @@ export function ReviewForm() {
 
       {previousReviews.map((currentReview) => {
         return (
-          <>
+          <div id={previousReviews.indexOf(currentReview)}>
             <div className="card" style={{ width: "18rem" }}>
               <div className="card-body">
                 <h5 className="card-title">{currentReview.username}</h5>
@@ -104,13 +133,15 @@ export function ReviewForm() {
                 </h6>
                 <p className="card-text">{currentReview.comments}</p>
               </div>
-            </div>
-            <Link to={`/edit-review/${beer.data._id}`}>
-              <button className="btn btn-primary mt-3" type="button">
-                Edite aqui seu comentário!
+              <button
+                className="btn btn-danger mb-3"
+                type="button"
+                onClick={indexOnClick}
+              >
+                Apague este review
               </button>
-            </Link>
-          </>
+            </div>
+          </div>
         );
       })}
     </>
