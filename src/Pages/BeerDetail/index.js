@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
 import { ReviewCard } from "../../Components/ReviewCard";
+import { ReviewForm } from "../../Components/ReviewForm";
 
 export function BeerDetail() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export function BeerDetail() {
         const response = await axios.get(
           `https://ironrest.herokuapp.com/mocked-beers/${id}`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setBeerDetail(response.data);
       } catch (error) {
         console.log(error);
@@ -22,8 +23,6 @@ export function BeerDetail() {
     }
     fetchBeerDetail();
   }, [id]);
-
- 
 
   return (
     <div>
@@ -37,11 +36,13 @@ export function BeerDetail() {
       <h4>Descrição: {beerDetail.description}</h4>
       <h4>Sugestão de harmonização: {beerDetail.pair}</h4>
 
-      {/* <ReviewCard
-        name={beerDetail.reviews.name}
-        score={beerDetail.reviews.score}
-        comments={beerDetail.reviews.comments}
-      /> */}
+      <ReviewForm />
+
+      <ReviewCard
+        username={beerDetail.username}
+        score={beerDetail.score}
+        comments={beerDetail.comments}
+      />
     </div>
   );
 }
