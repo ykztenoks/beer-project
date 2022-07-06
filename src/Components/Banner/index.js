@@ -1,9 +1,11 @@
 import img1 from "../../Assets/images/beerwall.jpg";
 import img2 from "../../Assets/images/Copos-de-cerveja-brindando-scaled.jpg";
 import img3 from "../../Assets/images/Preco-cerveja.jpg";
+import style from "./style.module.css"
+
 export function Banner() {
   return (
-    <div>
+    <div className={style.banner}>
       <div
         id="carouselExampleControls"
         className="carousel slide"

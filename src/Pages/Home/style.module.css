@@ -1,0 +1,20 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #ceeaf3, #ffdbbd);
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
+.header {
+  display: flex;
+  background-color: #2a2a2a;
+  height: auto;
+  color: #c5d8d1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 3px #71a3c1;
+  text-shadow: 0 0 3px #71a3c1;
+}

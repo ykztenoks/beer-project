@@ -14,6 +14,7 @@ export function ReviewForm() {
     score: "",
     comments: "",
   });
+  console.log(previousReviews);
 
   useEffect(() => {
     async function fetchReview() {
@@ -35,6 +36,14 @@ export function ReviewForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
     //ESSE EH PRA GUARDAR ALTERACOOOOESSS
   };
+
+  // const handleDelete = (review) => {
+  //   const clone = { reviews: [...previousReviews, form] };
+  //   const newReviews = clone.filter((currentReview) => {
+  //     return review !== currentReview;
+  //   });
+  //   setPreviousReviews({ ...previousReviews, [review]: newReviews });
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,8 +102,9 @@ export function ReviewForm() {
       </form>
 
       {previousReviews.map((currentReview) => {
+        console.log(previousReviews);
         return (
-          <>
+          <div key={currentReview._id}>
             <div className="card" style={{ width: "18rem" }}>
               <div className="card-body">
                 <h5 className="card-title">{currentReview.username}</h5>
@@ -105,11 +115,15 @@ export function ReviewForm() {
               </div>
             </div>
             <Link to={`/edit-review/${beer.data._id}`}>
-              <button className="btn btn-primary mt-3" type="button">
-                Edite aqui seu comentário!
+              <button
+                className="btn btn-danger m-3"
+                type="button"
+                // onClick={handleDelete(currentReview)}
+              >
+                apague este comentario
               </button>
             </Link>
-          </>
+          </div>
         );
       })}
     </>
