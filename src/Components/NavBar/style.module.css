@@ -1,0 +1,15 @@
+.navbar {
+}
+
+.btn {
+  transition-duration: 0.4s;
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #fc5f51;
+  color: white;
+}

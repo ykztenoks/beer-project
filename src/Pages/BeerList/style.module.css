@@ -1,0 +1,26 @@
+.title {
+  display: flex;
+  background-color: #2a2a2a;
+  height: auto;
+  color: #c5d8d1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 3px #71a3c1;
+  text-shadow: 0 0 3px #71a3c1;
+}
+
+.beerlist {
+  justify-content: center;
+  /* padding: 20px; */
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-image: linear-gradient(to bottom right, #ceeaf3, #ffdbbd);
+}
+
+.beerlistcard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
