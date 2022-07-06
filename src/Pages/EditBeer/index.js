@@ -56,11 +56,19 @@ export function EditBeer() {
   }
 
   async function handleDelete() {
-    try {
-      await axios.delete(`https://ironrest.herokuapp.com/mocked-beers/${id}`);
-      navigate("/beer-list");
-    } catch (error) {
-      console.log(error);
+    if (
+      window.confirm(
+        "Tem certeza que deseja apagar? Nosso site é aberto para colaboração, alguém poderá ver essa cerveja e provar e ter uma otima noite de jantar nao seja bobo nao apague a cervejinha alheia colabore"
+      ) === true
+    ) {
+      try {
+        await axios.delete(`https://ironrest.herokuapp.com/mocked-beers/${id}`);
+        navigate("/beer-list");
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      return;
     }
   }
 

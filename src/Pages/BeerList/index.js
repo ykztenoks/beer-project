@@ -28,7 +28,7 @@ export function BeerList() {
       <ButtonBack />
       {beer.map((currentBeer) => {
         return (
-          <div>
+          <div key={currentBeer._id}>
             <Link to={`/beer-detail/${currentBeer._id}`}>
               <Card beer={currentBeer} />
             </Link>

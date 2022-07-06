@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate} from "react-router-dom";
-
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 export function ReviewForm() {
   const [previousReviews, setPreviousReviews] = useState([]);
@@ -102,7 +101,7 @@ export function ReviewForm() {
                 <h6 className="card-subtitle mb-2 text-muted">
                   {currentReview.score}
                 </h6>
-                <p className="card-text">{currentReview.comments}</p>
+                <div className="card-text">{currentReview.comments}</div>
               </div>
             </div>
             <Link to={`/edit-review/${beer.data._id}`}>

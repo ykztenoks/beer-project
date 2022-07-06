@@ -1,13 +1,21 @@
 export function Card({ beer }) {
   return (
-    <div className="card-group d-flex align-content-start flex-wrap">
+    <div
+      className="card-group d-flex align-content-start flex-wrap"
+      style={{ width: "400px" }}
+    >
       <div className="card">
-        <img src="..." className="card-img-top" alt="..." />
+        <img
+          src={`${beer.logo}`}
+          className="card-img-top"
+          style={{ height: "400px" }}
+          alt="..."
+        />
         <div className="card-body">
           <h5 className="card-title">{beer.name}</h5>
           <p className="card-text">
-            <div>IBU: {beer.ibu}</div>
-            <div>{beer.style}</div>
+            <span>IBU: {beer.ibu}</span>
+            <span>{beer.style}</span>
           </p>
           <div className="card-text">
             <small className="text-muted">
