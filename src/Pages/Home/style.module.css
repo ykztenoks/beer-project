@@ -4,7 +4,8 @@
   margin: 0;
   background-image: linear-gradient(to bottom right, #ceeaf3, #ffdbbd);
   box-sizing: border-box;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
+  height: 600px;
 }
 
 .header {
@@ -18,3 +19,12 @@
   border-bottom: solid 3px #71a3c1;
   text-shadow: 0 0 3px #71a3c1;
 }
+
+/* .hr {
+  border-right: 2px solid green;
+  height: auto;
+}
+
+.hr2{
+  
+} */

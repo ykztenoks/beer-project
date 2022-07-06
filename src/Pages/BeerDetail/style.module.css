@@ -1,0 +1,14 @@
+.beerdetail {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #ceeaf3, #ffdbbd);
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  height: auto;
+  padding: 20px;
+}
+
+.hr {
+  margin-bottom: 80px;
+}
