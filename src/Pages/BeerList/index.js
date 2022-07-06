@@ -27,6 +27,7 @@ export function BeerList() {
     <div className={style.beerlist}>
       <h1 className={style.title}>Beer List</h1>
       <ButtonBack />
+
       <div className={style.beerlistcard}>
         {beer.map((currentBeer) => {
           return (
@@ -38,6 +39,7 @@ export function BeerList() {
           );
         })}
       </div>
+
     </div>
   );
 }
