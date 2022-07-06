@@ -3,6 +3,8 @@ import style from "./style.module.css";
 export function Card({ beer }) {
   return (
     <div className={style.beercard}>
+
+
       <div className={style.cardgroup}>
         <div className={style.card}>
           <div className={style.cardimg}>
@@ -23,6 +25,7 @@ export function Card({ beer }) {
             </div>
 
             <div className={style.cardtext}>
+
               <small className="text-muted">
                 <span>{beer.country}</span>
               </small>
