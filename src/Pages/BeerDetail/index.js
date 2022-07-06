@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
 import { ReviewForm } from "../../Components/ReviewForm";
+import style from "./style.module.css";
 
 export function BeerDetail() {
   const { id } = useParams();
@@ -24,7 +25,7 @@ export function BeerDetail() {
   }, [id]);
 
   return (
-    <div>
+    <div className={style.beerdetail}>
       <ButtonBack />
       <h1>{beerDetail.name} </h1>
       <h4>Desde: {beerDetail.year}</h4>
@@ -37,6 +38,8 @@ export function BeerDetail() {
       <Link to={`/edit-beer/${id}`}>
         <button>Editar informações</button>
       </Link>
+      <hr className={style.hr}></hr>
+      <h4>Conhece esta cerveja? que tal deixar uma opinião ou sugestão?</h4>
       <ReviewForm />
     </div>
   );

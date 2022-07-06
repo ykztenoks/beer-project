@@ -1,7 +1,7 @@
 import img1 from "../../Assets/images/beerwall.jpg";
 import img2 from "../../Assets/images/Copos-de-cerveja-brindando-scaled.jpg";
 import img3 from "../../Assets/images/Preco-cerveja.jpg";
-import style from "./style.module.css"
+import style from "./style.module.css";
 
 export function Banner() {
   return (
@@ -13,13 +13,13 @@ export function Banner() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-50" src={img1} alt="First slide" />
+            <img className={style.img} src={img1} alt="First slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-50" src={img2} alt="Second slide" />
+            <img className={style.img} src={img2} alt="Second slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-50" src={img3} alt="Third slide" />
+            <img className={style.img} src={img3} alt="Third slide" />
           </div>
         </div>
         <a

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import style from "./style.module.css";
 
 export function ReviewForm() {
   const [previousReviews, setPreviousReviews] = useState([]);
@@ -62,7 +63,7 @@ export function ReviewForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className={style.form} onSubmit={handleSubmit}>
         <label htmlFor="name-input">Digite seu nome: </label>
         <input
           id="name-input"
@@ -73,7 +74,8 @@ export function ReviewForm() {
           required
         />
         <label htmlFor="score-input">
-          Qual a nota que você dá para esta cerveja?{" "}
+          Qual a nota que você dá para esta cerveja? (escolha um numero de 0 a
+          5*){" "}
         </label>
         <input
           id="score-input"
@@ -89,6 +91,7 @@ export function ReviewForm() {
           Digite as suas experiências e recomendações:{" "}
         </label>
         <input
+          className={style.commentinput}
           id="comments-input"
           value={form.comments}
           type="string"
@@ -96,7 +99,7 @@ export function ReviewForm() {
           onChange={handleChange}
           required
         />
-        <button className="btn btn-primary mb-3" type="submit">
+        <button className={style.btn} type="submit">
           Envie seu review!
         </button>
       </form>
@@ -104,17 +107,19 @@ export function ReviewForm() {
       {previousReviews.map((currentReview) => {
         console.log(previousReviews);
         return (
-          <div key={currentReview._id}>
-            <div className="card" style={{ width: "18rem" }}>
-              <div className="card-body">
-                <h5 className="card-title">{currentReview.username}</h5>
+          <div key={currentReview._id} className={style.card}>
+            <div className="" style={{ width: "18rem" }}>
+              <div className="">
+                <h5 className="card-title">@{currentReview.username}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">
-                  {currentReview.score}
+                  Avaliação do usuário: {currentReview.score}
                 </h6>
-                <div className="card-text">{currentReview.comments}</div>
+                <div className="card-text">
+                  Recomendações: {currentReview.comments}
+                </div>
               </div>
             </div>
-            <Link to={`/edit-review/${beer.data._id}`}>
+            {/* <Link to={`/edit-review/${beer.data._id}`}>
               <button
                 className="btn btn-danger m-3"
                 type="button"
@@ -122,7 +127,7 @@ export function ReviewForm() {
               >
                 apague este comentario
               </button>
-            </Link>
+            </Link> */}
           </div>
         );
       })}
