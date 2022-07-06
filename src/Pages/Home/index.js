@@ -8,9 +8,15 @@ export function Home() {
   return (
     <div className={style.home}>
       <div className={style.header}>
+      <div className={style.hr}>
+        <div className={style.hr2}>
+        </div>
         <h1 className={style.title}>Home</h1>
+        </div>
         <NavBar />
+        
         <SearchBar />
+        
       </div>      
       <Banner />
     </div>

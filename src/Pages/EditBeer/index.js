@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
 import { Toaster, toast } from "react-hot-toast";
+import style from "./style.module.css";
 
 export function EditBeer() {
   const { id } = useParams();
@@ -76,9 +77,8 @@ export function EditBeer() {
     <div className="d-flex flex-column m-4 mb-5">
       <Toaster />
       <ButtonBack />
-
       <h1>Editar informações:</h1>
-      <form onSubmit={handleSubmit}>
+      <form className={style.formm} onSubmit={handleSubmit}>
         <label htmlFor="name-input">Nome da cerveja</label>
         <input
           id="name-input"

@@ -1,34 +1,35 @@
-import style from "./style.module.css"
+import style from "./style.module.css";
 
 export function Card({ beer }) {
   return (
-
     <div className={style.beercard}>
-    <div className="card-group">
-
-      <div className="card">
-        <img
-          src={`${beer.logo}`}
-          className="card-img-top"
-          style={{ height: "400px" }}
-          alt="..."
-        />
-        <div className="card-body">
-          <h5 className="card-title">{beer.name}</h5>
-
-          <div className="card-text">
-            <div>IBU: {beer.ibu}</div>
-            <div>{beer.style}</div>
+      <div className={style.cardgroup}>
+        <div className={style.card}>
+          <div className={style.cardimg}>
+            <img
+              className={style.img}
+              src={`${beer.logo}`}
+              // className="card-img-top"
+              // style={{ objectFit: "cover" }}
+              alt="..."
+            />
           </div>
+          <div className={style.cardbody}>
+            <h5 className={style.cardtitle}>{beer.name}</h5>
 
-          <div className="card-text">
-            <small className="text-muted">
-              <span>{beer.country}</span>
-            </small>
+            <div className={style.cardtext}>
+              <div>IBU: {beer.ibu}</div>
+              <div>{beer.style}</div>
+            </div>
+
+            <div className={style.cardtext}>
+              <small className="text-muted">
+                <span>{beer.country}</span>
+              </small>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

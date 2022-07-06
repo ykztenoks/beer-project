@@ -1,0 +1,22 @@
+.card {
+  margin-bottom: 12px;
+  border-radius: 20px;
+  border: 2px solid black;
+  width: 320px;
+  background-color: white;
+  padding: 15px;
+}
+
+.btn {
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
+
+.form {
+  margin-top: 15px;
+}
+
+.commentinput {
+  display: flex;
+  height: 120px;
+}
