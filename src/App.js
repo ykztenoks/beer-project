@@ -8,6 +8,7 @@ import { Error } from "./Pages/Error";
 import { Header } from "./Components/Header";
 import { EditBeer } from "./Pages/EditBeer";
 import { Toaster } from "react-hot-toast";
+import style from "./styles.css";
 
 function App() {
   return (
