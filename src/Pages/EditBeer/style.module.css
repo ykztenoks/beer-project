@@ -1,7 +1,21 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  /* justify-content: center;
-    align-items: stretch; */
+}
+
+
+.editbeer{
+  padding: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.comment{
+  height: 150px;
+  text-align: top;
+  
+}
+
+input{
+  display: inline-block;
 }

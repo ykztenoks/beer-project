@@ -74,95 +74,98 @@ export function EditBeer() {
   }
 
   return (
-    <div className="d-flex flex-column m-4 mb-5">
+    <>
       <Toaster />
       <ButtonBack />
-      <h1>Editar informações:</h1>
-      <form className={style.formm} onSubmit={handleSubmit}>
-        <label htmlFor="name-input">Nome da cerveja</label>
-        <input
-          id="name-input"
-          value={form.name}
-          type="string"
-          name="name"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="ibu-input">IBU da cerveja (Índice de amargor)</label>
-        <input
-          id="ibu-input"
-          value={form.ibu}
-          type="number"
-          name="ibu"
-          onChange={handleChange}
-          max="9999"
-          required
-        />
-        <label htmlFor="country-input">Em que país foi criada?</label>
-        <input
-          id="country-input"
-          value={form.country}
-          type="string"
-          name="country"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="style-input">Estilo da cerveja</label>
-        <input
-          id="style-input"
-          value={form.style}
-          type="string"
-          name="style"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="abv-input">ABV (Teor alcóolico)</label>
-        <input
-          id="abv-input"
-          value={form.abv}
-          type="string"
-          name="abv"
-          onChange={handleChange}
-          required
-          //   max="100"
-        />
-        <label htmlFor="description-input">
-          Comente um pouco sobre a cerveja
-        </label>
-        <input
-          id="description-input"
-          value={form.description}
-          type="string"
-          name="description"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="year-input">Em qual ano foi criada?</label>
-        <input
-          id="year-input"
-          value={form.year}
-          type="number"
-          name="year"
-          onChange={handleChange}
-          max="2022"
-          required
-        />
-        <label htmlFor="pair-input">Harmoniza bem com?</label>
-        <input
-          id="pair-input"
-          value={form.pair}
-          type="string"
-          name="pair"
-          onChange={handleChange}
-          required
-        />
-        <button className="btn btn-primary mt-3" type="submit">
-          Confirmar alterações
-        </button>
-        <button className="btn btn-danger mt-3" onClick={handleDelete}>
-          Excluir cerveja
-        </button>
-      </form>
-    </div>
+      <div className={style.editbeer}>
+        <h1>Editar informações:</h1>
+        <form className={style.form} onSubmit={handleSubmit}>
+          <label htmlFor="name-input">Nome da cerveja</label>
+          <input
+            id="name-input"
+            value={form.name}
+            type="string"
+            name="name"
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="ibu-input">IBU da cerveja (Índice de amargor)</label>
+          <input
+            id="ibu-input"
+            value={form.ibu}
+            type="number"
+            name="ibu"
+            onChange={handleChange}
+            max="9999"
+            required
+          />
+          <label htmlFor="country-input">Em que país foi criada?</label>
+          <input
+            id="country-input"
+            value={form.country}
+            type="string"
+            name="country"
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="style-input">Estilo da cerveja</label>
+          <input
+            id="style-input"
+            value={form.style}
+            type="string"
+            name="style"
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="abv-input">ABV (Teor alcóolico)</label>
+          <input
+            id="abv-input"
+            value={form.abv}
+            type="string"
+            name="abv"
+            onChange={handleChange}
+            required
+            //   max="100"
+          />
+          <label htmlFor="description-input">
+            Comente um pouco sobre a cerveja
+          </label>
+          <input
+            className={style.comment}
+            id="description-input"
+            value={form.description}
+            type="string"
+            name="description"
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="year-input">Em qual ano foi criada?</label>
+          <input
+            id="year-input"
+            value={form.year}
+            type="number"
+            name="year"
+            onChange={handleChange}
+            max="2022"
+            required
+          />
+          <label htmlFor="pair-input">Harmoniza bem com?</label>
+          <input
+            id="pair-input"
+            value={form.pair}
+            type="string"
+            name="pair"
+            onChange={handleChange}
+            required
+          />
+          <button className="btn btn-primary mt-3" type="submit">
+            Confirmar alterações
+          </button>
+          <button className="btn btn-danger mt-3" onClick={handleDelete}>
+            Excluir cerveja
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
