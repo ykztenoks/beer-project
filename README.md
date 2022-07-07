@@ -10,4 +10,4 @@ We've developed a webpage for beer lovers, where you can check out some beers fr
 
 [Presentation link](https://www.canva.com/design/DAFFsUmgNFg/oiehVEsK0omzxBeuBtklZg/edit?utm_content=DAFFsUmgNFg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-![logo](https://imgur.com/a/TX8SQzg)
+![logo](https://github.com/ykztenoks/beer-project/blob/main/src/Assets/images/logobeery.PNG)
