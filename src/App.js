@@ -7,12 +7,13 @@ import { AboutUs } from "./Pages/AboutUs";
 import { Error } from "./Pages/Error";
 import { Header } from "./Components/Header";
 import { EditBeer } from "./Pages/EditBeer";
-import style from "./styles.css";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beer-detail/:id" element={<BeerDetail />} />

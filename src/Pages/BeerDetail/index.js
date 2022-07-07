@@ -28,6 +28,16 @@ export function BeerDetail() {
     <div className={style.beerdetail}>
       <ButtonBack />
       <div className={style.textblock}>
+        <div className={style.imageBox}>
+          <img
+            className={style.imgfix}
+            style={{ width: "100%" }}
+            src={beerDetail.logo}
+            // className="card-img-top"
+            // style={{ objectFit: "cover" }}
+            alt="..."
+          />
+        </div>
         <div className={style.textcontent}>
           <h1>{beerDetail.name} </h1>
           <h4>Desde: {beerDetail.year}</h4>

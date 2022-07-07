@@ -7,6 +7,7 @@ import style from "./style.module.css";
 
 export function CreateBeer() {
   const [form, setForm] = useState({
+    logo: "",
     name: "",
     ibu: "",
     country: "",
@@ -41,6 +42,15 @@ export function CreateBeer() {
       <div className={style.textblock}>
         <h1>Adicione suas cervejas preferidas na nossa lista!</h1>
         <form onSubmit={handleSubmit}>
+          <label htmlFor="img-input">Adicione o logo da cerveja! (URL)</label>
+          <input
+            id="img-input"
+            value={form.logo}
+            type="string"
+            name="logo"
+            onChange={handleChange}
+            required
+          />
           <label htmlFor="name-input">Nome da cerveja</label>
           <input
             id="name-input"
