@@ -31,11 +31,13 @@ export function BeerList() {
       <div className={style.beerlistcard}>
         {beer.map((currentBeer) => {
           return (
-            <div>
+
+            <div className={style.card}>
               <Link
                 to={`/beer-detail/${currentBeer._id}`}
                 style={{ textDecoration: "none", color: "black" }}
               >
+
                 <Card beer={currentBeer} />
               </Link>
             </div>
