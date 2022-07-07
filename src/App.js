@@ -9,6 +9,8 @@ import { Header } from "./Components/Header";
 import { EditBeer } from "./Pages/EditBeer";
 import { Toaster } from "react-hot-toast";
 import style from "./styles.css";
+import { RandomBeer } from "./Pages/RandomBeer";
+import { RandomBeerCard } from "./Components/RandomBeerCard";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/beer-detail/:id" element={<BeerDetail />} />
         {/* <Route path="/edit-review/:id" element={<EditReviewForm />} /> */}
+        <Route path="/random-beer-card" element={<RandomBeerCard />} />
         <Route path="/beer-list" element={<BeerList />} />
         <Route path="/create-beer" element={<CreateBeer />} />
         <Route path="/about-us" element={<AboutUs />} />
