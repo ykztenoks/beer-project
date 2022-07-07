@@ -4,6 +4,7 @@ import { ButtonBack } from "../../Components/ButtonBack";
 import { Toaster, toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import style from "./style.module.css";
+import { Link } from "react-router-dom";
 
 export function CreateBeer() {
   const [form, setForm] = useState({
@@ -38,7 +39,10 @@ export function CreateBeer() {
   return (
     <div className={style.createbeer}>
       <Toaster />
-      <ButtonBack />
+      {/* <ButtonBack /> */}
+      <Link to="/beer-list">
+        <button>Voltar</button>
+      </Link>
       <div className={style.textblock}>
         <h1>Adicione suas cervejas preferidas na nossa lista!</h1>
         <form onSubmit={handleSubmit}>
