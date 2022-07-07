@@ -108,6 +108,7 @@ export function ReviewForm() {
       {previousReviews.map((currentReview) => {
         console.log(previousReviews);
         return (
+
           <div key={currentReview._id} className={style.card}>
             <div className="" style={{ width: "18rem" }}>
               <div className="">
@@ -116,9 +117,9 @@ export function ReviewForm() {
                   Avaliação do usuário: {currentReview.score}
                 </h6>
                 <div className="card-text">{currentReview.comments}</div>
+
               </div>
-            </div>
-            {/* <Link to={`/edit-review/${beer.data._id}`}>
+              {/* <Link to={`/edit-review/${beer.data._id}`}>
               <button
                 className="btn btn-danger m-3"
                 type="button"
@@ -127,6 +128,7 @@ export function ReviewForm() {
                 apague este comentario
               </button>
             </Link> */}
+            </div>
           </div>
         );
       })}
