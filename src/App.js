@@ -5,12 +5,14 @@ import { BeerList } from "./Pages/BeerList";
 import { CreateBeer } from "./Pages/CreateBeer";
 import { AboutUs } from "./Pages/AboutUs";
 import { Error } from "./Pages/Error";
-import { EditReviewForm } from "./Pages/EditReview";
+import { Header } from "./Components/Header";
 import { EditBeer } from "./Pages/EditBeer";
+import style from "./styles.css";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beer-detail/:id" element={<BeerDetail />} />
