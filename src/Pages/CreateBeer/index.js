@@ -39,9 +39,9 @@ export function CreateBeer() {
   return (
     <div className={style.createbeer}>
       <Toaster />
-      {/* <ButtonBack /> */}
+
       <Link to="/beer-list">
-        <button>Voltar</button>
+        <button className={`btn-warning ${style.btn1}`}>Voltar</button>
       </Link>
       <div className={style.textblock}>
         <h1>Adicione suas cervejas preferidas na nossa lista!</h1>
@@ -133,7 +133,7 @@ export function CreateBeer() {
             onChange={handleChange}
             required
           />
-          <button className="btn btn-primary mt-3" type="submit">
+          <button className="btn btn-warning mt-3" type="submit">
             Adicionar Cerveja!
           </button>
         </form>

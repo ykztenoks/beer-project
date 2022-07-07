@@ -1,5 +1,8 @@
 .beerlist {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
   /* padding: 20px; */
   padding-left: 20px;
   padding-bottom: 20px;
@@ -9,15 +12,15 @@
 }
 
 .title {
-  display: flex;
-  background-color: #2a2a2a;
+  background-color: #f7c02a;
   /* height: auto; */
-  color: #c5d8d1;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: solid 3px #71a3c1;
-  text-shadow: 0 0 3px #71a3c1;
+  color: black;
+
+  /* justify-content: center; */
+  align-self: center;
+  border-bottom: solid 3px #808080;
+  text-shadow: 0 0 3px #808080;
+  width: 100%;
 }
 
 .beerlistcard {

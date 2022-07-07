@@ -63,9 +63,8 @@ export function ReviewForm() {
 
   return (
     <>
-
       <form className={style.form} onSubmit={handleSubmit}>
-      <h4>Conhece esta cerveja? Que tal deixar uma opinião ou sugestão?</h4>
+        <h4>Conhece esta cerveja? Que tal deixar uma opinião ou sugestão?</h4>
         <label htmlFor="name-input">Digite seu nome: </label>
         <input
           id="name-input"
@@ -101,7 +100,7 @@ export function ReviewForm() {
           onChange={handleChange}
           required
         />
-        <button className={style.btn} type="submit">
+        <button className={`${style.btn} btn-warning`} type="submit">
           Envie seu review!
         </button>
       </form>
@@ -116,9 +115,7 @@ export function ReviewForm() {
                 <h6 className="card-subtitle mb-2 text-muted">
                   Avaliação do usuário: {currentReview.score}
                 </h6>
-                <div className="card-text">
-                  Recomendações: {currentReview.comments}
-                </div>
+                <div className="card-text">{currentReview.comments}</div>
               </div>
             </div>
             {/* <Link to={`/edit-review/${beer.data._id}`}>

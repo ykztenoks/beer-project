@@ -43,7 +43,7 @@ export function SearchBar() {
         options={options}
         onChange={handleSelect}
         styles={styleFunction}
-        placeholder="Procurar cerveja perfeita..."
+        placeholder="Procurar cerveja perfeita...👌"
       />
     </div>
   );

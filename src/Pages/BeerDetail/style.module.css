@@ -62,3 +62,7 @@
   align-items: center;
   display: flex;
 }
+
+.btn1 {
+  border-radius: 8px;
+}
