@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img1 from "../../Assets/images/beerwall.jpg";
 import img2 from "../../Assets/images/Copos-de-cerveja-brindando-scaled.jpg";
 import img3 from "../../Assets/images/Preco-cerveja.jpg";
@@ -20,11 +21,9 @@ export function Banner() {
             />
           </div>
           <div className="carousel-item">
-            <img
-              className={style.img}
-              src="https://i.pinimg.com/originals/27/4e/92/274e92c65be7513f12ad52e9fdd5be2a.jpg"
-              alt="Second slide"
-            />
+            <Link to="/random-beer">
+              <img className={style.img} src={img2} alt="Second slide" />
+            </Link>
           </div>
           <div className="carousel-item">
             <img className={style.img} src={img3} alt="Third slide" />

@@ -117,8 +117,7 @@ export function ReviewForm() {
                 </h6>
                 <div className="card-text">{currentReview.comments}</div>
               </div>
-            </div>
-            {/* <Link to={`/edit-review/${beer.data._id}`}>
+              {/* <Link to={`/edit-review/${beer.data._id}`}>
               <button
                 className="btn btn-danger m-3"
                 type="button"
@@ -127,6 +126,7 @@ export function ReviewForm() {
                 apague este comentario
               </button>
             </Link> */}
+            </div>
           </div>
         );
       })}
