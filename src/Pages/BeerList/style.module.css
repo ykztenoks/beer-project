@@ -5,7 +5,7 @@
   padding-bottom: 20px;
   padding-top: 10px;
   background-image: linear-gradient(to bottom right, #000000, #60544c);
-  height: 1200px;
+  height: auto;
 }
 
 .title {

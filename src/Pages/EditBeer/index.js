@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ButtonBack } from "../../Components/ButtonBack";
 import { Toaster, toast } from "react-hot-toast";
 import style from "./style.module.css";
@@ -51,6 +51,7 @@ export function EditBeer() {
         `https://ironrest.herokuapp.com/mocked-beers/${id}`,
         clone
       );
+      navigate("/beer-list");
     } catch (err) {
       console.log(err);
     }
@@ -77,7 +78,10 @@ export function EditBeer() {
     <>
       <div className={style.editbeer}>
         <Toaster />
-        <ButtonBack />
+        {/* <ButtonBack /> */}
+        <Link to={`/beer-detail/${id}`}>
+          <button>voltar</button>
+        </Link>
         <div className={style.textblock}>
           <h1>Editar informações:</h1>
           <form className={style.form} onSubmit={handleSubmit}>
@@ -100,6 +104,7 @@ export function EditBeer() {
               name="ibu"
               onChange={handleChange}
               max="9999"
+              min="0"
               required
             />
             <label htmlFor="country-input">Em que país foi criada?</label>

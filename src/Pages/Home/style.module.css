@@ -7,7 +7,7 @@
 
   box-sizing: border-box;
   /* padding-bottom: 50px; */
-  height: 600px;
+  height: 800px;
 }
 
 .header {
@@ -19,7 +19,7 @@
   justify-content: space-around;
   align-items: center;
   border-top: solid 10px rgb(233, 230, 156);
- 
+
   text-shadow: 0 0 3px rgb(161, 159, 159);
 }
 

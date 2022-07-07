@@ -26,7 +26,10 @@ export function BeerDetail() {
 
   return (
     <div className={style.beerdetail}>
-      <ButtonBack />
+      {/* <ButtonBack /> */}
+      <Link to="/beer-list">
+        <button>Voltar</button>
+      </Link>
       <div className={style.textblock}>
         <div className={style.textcontent}>
           <h1>{beerDetail.name} </h1>
