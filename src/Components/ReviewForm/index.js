@@ -63,9 +63,8 @@ export function ReviewForm() {
 
   return (
     <>
-
       <form className={style.form} onSubmit={handleSubmit}>
-      <h4>Conhece esta cerveja? Que tal deixar uma opinião ou sugestão?</h4>
+        <h4>Conhece esta cerveja? Que tal deixar uma opinião ou sugestão?</h4>
         <label htmlFor="name-input">Digite seu nome: </label>
         <input
           id="name-input"
@@ -109,19 +108,20 @@ export function ReviewForm() {
       {previousReviews.map((currentReview) => {
         console.log(previousReviews);
         return (
-          <div key={currentReview._id} className={style.card}>
-            <div className="" style={{ width: "18rem" }}>
-              <div className="">
-                <h5 className="card-title">@{currentReview.username}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">
-                  Avaliação do usuário: {currentReview.score}
-                </h6>
-                <div className="card-text">
-                  Recomendações: {currentReview.comments}
+          <div key={currentReview.username}>
+            <div className={style.card}>
+              <div className="" style={{ width: "18rem" }}>
+                <div className="">
+                  <h5 className="card-title">@{currentReview.username}</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    Avaliação do usuário: {currentReview.score}
+                  </h6>
+                  <div className="card-text">
+                    Recomendações: {currentReview.comments}
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* <Link to={`/edit-review/${beer.data._id}`}>
+              {/* <Link to={`/edit-review/${beer.data._id}`}>
               <button
                 className="btn btn-danger m-3"
                 type="button"
@@ -130,6 +130,7 @@ export function ReviewForm() {
                 apague este comentario
               </button>
             </Link> */}
+            </div>
           </div>
         );
       })}
