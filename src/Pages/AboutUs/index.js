@@ -23,7 +23,7 @@ export function AboutUs() {
           Mesmo sob muita demanda de carga de estudos do bootcamp , o trabalho
           recompensou de forma parecida com a primeira cerveja pós expediente de
           uma sexta-feira cheia! A experiência de criar algo do zero nos trouxe
-          cada vez mais próximo de como agir e pensar como um programador
+          cada vez mais próximos de como agir e pensar como um programador
           profissional que planeja , executa , erra, e tenta de novo com novas
           idéias e abstrações dos erros passados.
         </p>
