@@ -81,6 +81,15 @@ export function EditBeer() {
         <div className={style.textblock}>
           <h1>Editar informações:</h1>
           <form className={style.form} onSubmit={handleSubmit}>
+            <label htmlFor="img-input">Adicione o logo da cerveja! (URL)</label>
+            <input
+              id="img-input"
+              value={form.logo}
+              type="string"
+              name="logo"
+              onChange={handleChange}
+              required
+            />
             <label htmlFor="name-input">Nome da cerveja</label>
             <input
               id="name-input"

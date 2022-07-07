@@ -38,3 +38,27 @@
   display: flex;
   flex-direction: column;
 }
+
+.imageBox {
+  width: 200px;
+  height: 300px;
+  float: right;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 105px -35px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 105px -35px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.imgfix {
+  width: 200px;
+  height: 300px;
+  margin-right: 8px;
+
+  border: 2px solid white;
+  border-radius: 20px;
+  object-fit: contain;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
