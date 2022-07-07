@@ -25,5 +25,6 @@ export function RandomBeer() {
 
   const randomBeer = Math.floor(Math.random() * allBeer.length);
 
-  return navigate(`/beer-detail/${allBeer[randomBeer]._id}`);
+   navigate(`/beer-detail/${allBeer[randomBeer]._id}`);
+   return randomBeer();
 }
