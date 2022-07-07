@@ -44,8 +44,9 @@ export function BeerDetail() {
       </div>
 
       <hr className={style.hr}></hr>
-      <h4>Conhece esta cerveja? que tal deixar uma opinião ou sugestão?</h4>
-      <ReviewForm />
+      <div className={style.reviewform}>
+        <ReviewForm className={style.foform} />
+      </div>
     </div>
   );
 }

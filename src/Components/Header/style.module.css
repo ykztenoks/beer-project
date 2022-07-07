@@ -17,6 +17,7 @@
   justify-content: space-around;
   align-items: center;
   border-top: solid 10px rgb(233, 230, 156);
+  border-bottom: solid 4px grey;
   text-shadow: 0 0 3px rgb(161, 159, 159);
 }
 

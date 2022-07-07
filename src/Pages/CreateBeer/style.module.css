@@ -1,22 +1,12 @@
-form {
+.createbeer {
   display: flex;
   flex-direction: column;
-}
-
-.editbeer {
-  padding: 50px;
-  height: 100%;
-  width: 100%;
+  margin: 0;
   background-image: linear-gradient(to bottom right, #000000, #60544c);
-}
-
-.comment {
-  height: 150px;
-  text-align: top;
-}
-
-input {
-  display: inline-block;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  height: auto;
+  padding: 20px;
 }
 
 .textblock {
@@ -24,8 +14,14 @@ input {
   margin-bottom: 10px;
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.849);
+
   color: black;
   border-radius: 20px;
   padding: 20px;
   width: 100%;
+}
+
+.comment {
+  height: 150px;
+  text-align: top;
 }
