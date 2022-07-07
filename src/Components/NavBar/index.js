@@ -4,14 +4,14 @@ import style from "./style.module.css";
 export function NavBar() {
   return (
     <div className={style.navbar}>
-      <Link to="/beer-list">
-        <button className={style.btn}>Lista de cervejas</button>
+      <Link style={{ textDecoration: "none" }} to="/beer-list">
+        <span className={style.btn2}>Lista de cervejas</span>
       </Link>
-      <Link to="/about-us">
-        <button className={style.btn}>Sobre nós</button>
+      <Link style={{ textDecoration: "none" }} to="/about-us">
+        <span className={style.btn2}>Sobre nós</span>
       </Link>
-      <Link to="/create-beer">
-        <button className={style.btn}>Adicione uma cerveja!</button>
+      <Link style={{ textDecoration: "none" }} to="/create-beer">
+        <span className={style.btn2}>Adicione uma cerveja!</span>
       </Link>
     </div>
   );

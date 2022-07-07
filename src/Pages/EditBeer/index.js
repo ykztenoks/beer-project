@@ -80,7 +80,7 @@ export function EditBeer() {
         <Toaster />
         {/* <ButtonBack /> */}
         <Link to={`/beer-detail/${id}`}>
-          <button>voltar</button>
+          <button className={`btn-warning ${style.btn1}`}>Voltar</button>
         </Link>
         <div className={style.textblock}>
           <h1>Editar informações:</h1>
@@ -175,7 +175,7 @@ export function EditBeer() {
               onChange={handleChange}
               required
             />
-            <button className="btn btn-primary mt-3" type="submit">
+            <button className="btn btn-warning mt-3" type="submit">
               Confirmar alterações
             </button>
             <button className="btn btn-danger mt-3" onClick={handleDelete}>

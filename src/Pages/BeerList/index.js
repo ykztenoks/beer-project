@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Card } from "../../Components/Card";
-import { ButtonBack } from "../../Components/ButtonBack";
+
 import { Link } from "react-router-dom";
 import style from "./style.module.css";
 
@@ -25,8 +25,12 @@ export function BeerList() {
 
   return (
     <div className={style.beerlist}>
-      <h1 className={style.title}>Beer List</h1>
-      <ButtonBack />
+      <h1 className={style.title}>
+        Beer List
+        <span role="img" aria-label="beer">
+          🍺
+        </span>
+      </h1>
 
       <div className={style.beerlistcard}>
         {beer.map((currentBeer) => {

@@ -8,6 +8,12 @@ import { Header } from "../../Components/Header";
 export function Home() {
   return (
     <div className={style.home}>
+      <h2 className={style.title}>
+        O lugar para celebrejar
+        <span role="img" aria-label="beer">
+          🍻
+        </span>
+      </h2>
       <Banner />
     </div>
   );

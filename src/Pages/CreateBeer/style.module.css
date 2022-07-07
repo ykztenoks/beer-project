@@ -25,3 +25,7 @@
   height: 150px;
   text-align: top;
 }
+
+.btn1 {
+  border-radius: 8px;
+}

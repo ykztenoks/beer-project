@@ -14,12 +14,18 @@ export function Banner() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className={style.img} src={img1} alt="First slide" />
+            <img
+              className={style.img}
+              src="https://urbanlife.gr/wp-content/uploads/2017/04/banner-beer-and-cider3-jpg.jpg"
+              alt="First slide"
+            />
           </div>
           <div className="carousel-item">
+
             <Link to="/random-beer">
               <img className={style.img} src={img2} alt="Second slide" />
             </Link>
+
           </div>
           <div className="carousel-item">
             <img className={style.img} src={img3} alt="Third slide" />
