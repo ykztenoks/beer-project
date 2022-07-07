@@ -32,14 +32,16 @@ export function BeerList() {
         {beer.map((currentBeer) => {
           return (
             <div>
-              <Link to={`/beer-detail/${currentBeer._id}`}>
+              <Link
+                to={`/beer-detail/${currentBeer._id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <Card beer={currentBeer} />
               </Link>
             </div>
           );
         })}
       </div>
-
     </div>
   );
 }

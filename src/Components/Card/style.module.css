@@ -23,13 +23,13 @@
 }
 
 .img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-right: 8px;
-  margin-top: 8px;
+
   border: 2px solid white;
   border-radius: 20px;
-  /* object-fit: cover; */
+  object-fit: contain;
   background-color: white;
   justify-content: center;
   align-items: center;
