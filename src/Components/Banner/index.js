@@ -21,9 +21,17 @@ export function Banner() {
             />
           </div>
           <div className="carousel-item">
+<<<<<<< HEAD
             <Link to="/random-beer">
               <img className={style.img} src={img2} alt="Second slide" />
             </Link>
+=======
+
+            <Link to="/random-beer">
+              <img className={style.img} src={img2} alt="Second slide" />
+            </Link>
+
+>>>>>>> 3aa01f42d7049485fd4c9a2e33955ef86a38ff17
           </div>
           <div className="carousel-item">
             <img className={style.img} src={img3} alt="Third slide" />
